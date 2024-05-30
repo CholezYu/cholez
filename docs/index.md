@@ -64,7 +64,7 @@ features:
       ]
     },
     {
-      avatar: "https://tvax2.sinaimg.cn/crop.0.0.1080.1080.180/005RX5vhly8h38p5mm9muj30u00u0jud.jpg?KID=imgbed,tva&Expires=1717071014&ssig=35XSeMU61L",
+      avatar: "https://p3-pc.douyinpic.com/img/aweme-avatar/tos-cn-i-0813_ooI98CkABJNjr6oonAEeWqeCLAAC0gbODHAAzz~c5_300x300.jpeg?from=2956013662",
       name: "小丸子",
       title: "清清不开心",
       desc: `FE Developer <br /> My Honey`,
