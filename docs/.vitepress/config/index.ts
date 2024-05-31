@@ -53,7 +53,7 @@ export default defineConfig({
     
     footer: {
       message: `<a href="https://beian.miit.gov.cn" target="_blank" style="text-decoration: none">赣ICP备2024033222号-1</a>`,
-      copyright: `Copyright © 2024 <a href="https://github.com/CholezYu/cholez" target="_blank">俞文健</a>`
+      copyright: `Copyright © 2024 <a href="https://github.com/CholezYu" target="_blank">俞文健</a>`
     },
     
     search: {
