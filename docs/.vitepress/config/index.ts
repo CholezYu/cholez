@@ -18,7 +18,7 @@ export default defineConfig({
   lastUpdated: true,
   
   // 删除 .html
-  cleanUrls: true,
+  // cleanUrls: true,
   
   // 提取 meta, 减少服务器带宽
   metaChunk: true,
