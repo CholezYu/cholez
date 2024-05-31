@@ -17,7 +17,7 @@ export default defineConfig({
   // 是否显示最后更新时间
   lastUpdated: true,
   
-  // 删除 .html
+  // 删除 .html, 会有刷新 404 的 bug
   // cleanUrls: true,
   
   // 提取 meta, 减少服务器带宽
@@ -31,7 +31,7 @@ export default defineConfig({
     nav,
     
     socialLinks: [
-      { icon: "github", link: "https://github.com/choIez/cholez" }
+      { icon: "github", link: "https://github.com/CholezYu/cholez" }
     ],
     
     outline: [2, 6],
@@ -53,7 +53,7 @@ export default defineConfig({
     
     footer: {
       message: `<a href="https://beian.miit.gov.cn" target="_blank" style="text-decoration: none">赣ICP备2024033222号-1</a>`,
-      copyright: `Copyright © 2024 <a href="https://github.com/choIez/cholez" target="_blank">俞文健</a>`
+      copyright: `Copyright © 2024 <a href="https://github.com/CholezYu/cholez" target="_blank">俞文健</a>`
     },
     
     search: {

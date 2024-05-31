@@ -20,7 +20,7 @@ hero:
     
     - theme: alt
       text: 在 GitHub 上查看
-      link: https://github.com/choIez/cholez
+      link: https://github.com/CholezYu/cholez
 
 features:
   - icon: 📖
@@ -54,12 +54,12 @@ features:
   
   const members = [
     {
-      avatar: "https://www.github.com/choIez.png",
+      avatar: "https://www.github.com/CholezYu.png",
       name: "Cholez.Yu",
       title: "Front-end King",
       desc: `🌈 我曾踏足山巅，也曾跌入低谷，二者都让我受益良多`,
       links: [
-        { icon: "github", link: "https://github.com/choIez" },
+        { icon: "github", link: "https://github.com/CholezYu" },
         { icon: { svg: icons.tiktok }, link: "https://v.douyin.com/i2THwY7e" },
       ]
     },

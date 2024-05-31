@@ -15,7 +15,7 @@
   ],
   "homepage": "http://cholez.cn",
   "license": "MIT",
-  "author": "Cholez.Yu<https://github.com/choIez>",
+  "author": "Cholez.Yu<https://github.com/CholezYu>",
   "type": "module",
   "packageManager": "yarn@4.2.2",
   "scripts": {
