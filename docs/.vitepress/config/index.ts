@@ -34,7 +34,10 @@ export default defineConfig({
       { icon: "github", link: "https://github.com/CholezYu/cholez" }
     ],
     
-    outline: [2, 6],
+    outline: {
+      level: [2, 6],
+      label: "导航栏"
+    },
     
     returnToTopLabel: "返回顶部",
     
