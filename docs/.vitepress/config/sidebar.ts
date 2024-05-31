@@ -19,7 +19,7 @@ const sidebar: DefaultTheme.Sidebar = {
       text: "数组",
       collapsed: false,
       items: [
-        { text: "1.两数之和", link: "/algorithm/array-list/1.两数之和" }
+        { text: "1. 两数之和", link: "/algorithm/array-list/1.两数之和" }
       ]
     }
   ]
