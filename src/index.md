@@ -41,11 +41,10 @@ features:
     link: /
     linkText: 解读《Vue.js 设计与实现》
   
-  
   - icon: 🏠
     title: 记录生活
     details: 今天，也是充满希望的一天。
-    link: /
+    link: /life/
     linkText: 生活中的我是这样的
 ---
 
