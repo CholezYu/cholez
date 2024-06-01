@@ -1,34 +1,20 @@
 import { defineConfig } from "vitepress"
-import { title, titleTemplate, description, logo } from "./meta"
 import sidebar from "./sidebar"
 import nav from "./nav"
-import head from "./head"
 
 export default defineConfig({
-  title,
+  title: "Cholez",
+  titleTemplate: true,
+  description: "前端文档、算法、深入解析 Vue.js、记录生活",
   
-  titleTemplate,
-  
-  description,
-  
-  // 打包目录
-  outDir: "./dist",
-  
-  // 是否显示最后更新时间
-  lastUpdated: true,
-  
-  // 删除 .html, 会有刷新 404 的 bug
-  // cleanUrls: true,
-  
-  // 提取 meta, 减少服务器带宽
-  metaChunk: true,
+  srcDir: "src",
+  outDir: "dist",
   
   themeConfig: {
-    logo,
-    
     sidebar,
-    
     nav,
+    
+    logo: "/icon.png",
     
     socialLinks: [
       { icon: "github", link: "https://github.com/CholezYu/cholez" }
@@ -67,5 +53,24 @@ export default defineConfig({
     externalLinkIcon: true
   },
   
-  head
+  head: [
+    ["meta", { name: "author", content: "Cholez.Yu" }],
+    ["meta", { name: "keywords", content: "Cholez, Web, Front-end, Vue, React, Algorithm" }],
+    
+    ["link", { rel: "icon", href: "/favicon.ico" }],
+    
+    ["meta", { property: "og:site_name", content: "Cholez" }],
+    ["meta", { property: "og:title", content: "Cholez | Front-end King" }],
+    ["meta", { property: "og:description", content: "前端文档、算法、深入解析 Vue.js、记录生活" }],
+    ["meta", { property: "og:url", content: "http://cholez.cn" }]
+  ],
+  
+  // 是否显示最后更新时间
+  lastUpdated: true,
+  
+  // 删除 .html, 会有刷新 404 的 bug
+  // cleanUrls: true,
+  
+  // 提取 meta, 减少服务器带宽
+  metaChunk: true
 })
