@@ -7,6 +7,19 @@ const sidebar: DefaultTheme.Sidebar = {
       items: [
         { text: "简介", link: "/intro" }
       ]
+    },
+    {
+      text: "🗓 我的 2024",
+      link: "/life/",
+      items: [
+        {
+          text: "六月",
+          collapsed: true,
+          items: [
+            { text: "第一周", link: "/life/2024/Jun/week-1" }
+          ]
+        }
+      ]
     }
   ],
   
@@ -19,7 +32,7 @@ const sidebar: DefaultTheme.Sidebar = {
       text: "数组",
       collapsed: false,
       items: [
-        { text: "1. 两数之和", link: "/algorithm/array-list/1.两数之和" }
+        { text: "#1. 两数之和", link: "/algorithm/array-list/1.两数之和" }
       ]
     }
   ]
