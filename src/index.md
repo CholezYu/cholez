@@ -2,7 +2,7 @@
 layout: home
 
 title: Cholez
-titleTemplate: Front-end King
+titleTemplate: 仰望星空的人，不应该被嘲笑
 
 hero:
   name: Cholez
