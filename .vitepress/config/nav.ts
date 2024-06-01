@@ -1,9 +1,10 @@
 import { DefaultTheme } from "vitepress"
 
 const nav: DefaultTheme.NavItem[] = [
-  { text: "Home", link: "/" },
+  { text: "📖 前端文档", link: "http://docs.yuwenjian.com" },
+  { text: "✏️ LeetCode", link: "/algorithm/" },
   {
-    text: "前端生态",
+    text: "🔥 生态系统",
     items: [
       {
         text: "Vue 生态",
@@ -26,7 +27,7 @@ const nav: DefaultTheme.NavItem[] = [
         ]
       },
       {
-        text: "CSS 生态",
+        text: "CSS",
         items: [
           { text: "UnoCSS", link: "https://unocss.dev" },
           { text: "Tailwind", link: "https://tailwindcss.com" },
@@ -42,13 +43,7 @@ const nav: DefaultTheme.NavItem[] = [
       }
     ]
   },
-  {
-    text: "其他项目",
-    items: [
-      { text: "Web Docs", link: "http://docs.yuwenjian.com" },
-      { text: "Blog", link: "http://blog.yuwenjian.com" }
-    ]
-  }
+  { text: "博客", link: "http://blog.yuwenjian.com" }
 ]
 
 export default nav
