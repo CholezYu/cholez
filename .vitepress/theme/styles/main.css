@@ -1,0 +1,17 @@
+/* 团队成员 */
+.VPTeamPageTitle .title {
+  line-height: 32px;
+  font-size: 32px;
+  opacity: 0.5;
+}
+
+/* nav */
+.VPMenu .title {
+  padding: 0 12px;
+  line-height: 28px;
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(60, 60, 60, .5);
+  white-space: nowrap;
+  transition: color .25s;
+}
