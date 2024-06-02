@@ -10,7 +10,7 @@ const sidebar: DefaultTheme.Sidebar = {
     },
     {
       text: "🗓 我的 2024",
-      link: "/life/",
+      link: "/life/2024/",
       items: [
         {
           text: "六月",
