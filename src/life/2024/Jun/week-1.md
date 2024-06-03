@@ -2,7 +2,14 @@
 
 ## 周日 Sun. <Badge type="info" text="06-02" />
 
-学习了[二叉搜索树 (BinarySearchTree)](http://docs.yuwenjian.com/algorithm/Tree.html#二叉搜索树)。并实现了 **插入**、 **查找**、 **删除** 操作。
+周末下雨，刷下抖音，看看中东局势，叶海亚太帅啦 😎！
+
+然后学习一下 [二叉搜索树 (BinarySearchTree)](http://docs.yuwenjian.com/algorithm/Tree.html#二叉搜索树)。
+实现了 **插入**、 **查找**、 **删除** 操作。
+
+> [!tip] 😕🫤😟🙁☹️😮😯😲😳🥺🥹😦😧😔
+>
+> 删除操作有点复杂，不确定能不能写出第二遍。
 
 插入操作。
 
