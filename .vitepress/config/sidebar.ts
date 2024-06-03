@@ -16,7 +16,8 @@ const sidebar: DefaultTheme.Sidebar = {
           text: "六月",
           collapsed: true,
           items: [
-            { text: "第一周", link: "/life/2024/Jun/week-1" }
+            { text: "第一周", link: "/life/2024/Jun/week-1" },
+            { text: "第二周", link: "/life/2024/Jun/week-2" }
           ]
         }
       ]
