@@ -33,9 +33,9 @@ const nav: DefaultTheme.NavItem[] = [
           { text: "Zustand", link: "https://zustand-demo.pmnd.rs" },
           { text: "Ant Design", link: "https://ant.design/index-cn" },
           { text: "Shadcn UI", link: "https://ui.shadcn.com" },
-          { text: "Next.js", link: "https://nextjs.org" },
           { text: "React Native", link: "https://reactnative.dev" },
-          { text: "Expo", link: "https://expo.dev" }
+          { text: "Expo", link: "https://expo.dev" },
+          { text: "Next.js", link: "https://nextjs.org" }
         ]
       },
       {
