@@ -18,29 +18,32 @@ const nav: DefaultTheme.NavItem[] = [
       {
         text: "Vue 生态",
         items: [
+          { text: "VueUse", link: "https://vueuse.org" },
           { text: "Element UI", link: "https://element.eleme.cn/#/zh-CN" },
           { text: "Element Plus", link: "https://element-plus.org/zh-CN" },
           { text: "Arco Design", link: "https://arco.design" },
           { text: "Vuetify", link: "https://vuetifyjs.com/zh-Hans" },
-          { text: "VueUse", link: "https://vueuse.org" },
+          { text: "PrimeVue", link: "https://primevue.org" },
           { text: "Nuxt.js", link: "https://nuxt.com" }
         ]
       },
       {
         text: "React 生态",
         items: [
+          { text: "Zustand", link: "https://zustand-demo.pmnd.rs" },
           { text: "Ant Design", link: "https://ant.design/index-cn" },
           { text: "Shadcn UI", link: "https://ui.shadcn.com" },
-          { text: "Zustand", link: "https://zustand-demo.pmnd.rs" },
-          { text: "Next.js", link: "https://nextjs.org" }
+          { text: "Next.js", link: "https://nextjs.org" },
+          { text: "React Native", link: "https://reactnative.dev" },
+          { text: "Expo", link: "https://expo.dev" }
         ]
       },
       {
         text: "CSS",
         items: [
+          { text: "Bootstrap", link: "https://getbootstrap.com" },
           { text: "UnoCSS", link: "https://unocss.dev" },
-          { text: "Tailwind", link: "https://tailwindcss.com" },
-          { text: "Bootstrap", link: "https://v5.bootcss.com" }
+          { text: "Tailwind", link: "https://tailwindcss.com" }
         ]
       },
       {
