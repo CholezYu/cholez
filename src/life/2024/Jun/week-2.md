@@ -68,7 +68,7 @@ async function toExcel(data, headers, title) {
       })
       
       // 清空 url 文本，只显示图片
-      sheet.getCell(`B${ row + 1 }`).value = ""
+      sheet.getCell(`B${row + 1}`).value = ""
       
       sheet.addImage(imageId, {
         tl: { row, col: 1 },
@@ -79,7 +79,7 @@ async function toExcel(data, headers, title) {
   
   await workbook.xlsx.writeBuffer().then(buffer => {
     const _file = new Blob([buffer], { type: "application/octet-stream" })
-    saveAs(_file, `${ title }.xlsx`)
+    saveAs(_file, `${title}.xlsx`)
   })
 }
 ```
@@ -89,3 +89,26 @@ async function toExcel(data, headers, title) {
 了解了二叉搜索树可能因为一些操作变成 “非平衡树”，目前很好的解决方案是使用**红黑树**。
 
 看很多资料都说红黑树学起来很困难，势必拿下 😁😎！
+
+## 周五 Mon. <Badge type="info" text="06-07" />
+
+### 暂避锋芒
+
+看了两天红黑树，翻了些资料，都还是没太看懂。目前只掌握了 **变色**、**左旋转**、**右旋转** 的原理，对于一些复杂情况，还是不知道从哪开始下手。
+虽然遇到了困难，但是不会止步于红黑树。学习的步伐不会停止，所以，我决定先学点其他技术，换换思维，也正好消化一下之前学的数据结构。
+
+## 周六 Mon. <Badge type="info" text="06-08" />
+
+### 重新起航
+
+经过深思熟虑，我决定开始对 React 系列下手，因为之前已经学过 React，有一定的基础。 这次的目标是 [React Native](https://reactnative.dev)
+和 [Next.js](https://nextjs.org)。但是太长时间没写 React 了，所以还是先回顾一下。
+
+现在 React 的开发基本上都是使用函数式组件，类式组件的部分就略过了。
+
+### 知识要点
+
+`useState` 需要注意的是，它是异步的，所以不应该在执行 `setState` 后立即获取最新的状态。以及相同 `setState` 的合并处理，并且组件只会重新渲染**一次**。
+
+`useEffect` 是 React 一个比较重要并且难理解的 hook。我们需要注意 `setup` 和 `cleanup` 函数的执行时机，以及受到依赖项的控制。
+最重要的是，如何正确使用 `useEffect`，这里就需要知道哪些操作是 **副作用**。
