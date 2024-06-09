@@ -6,7 +6,7 @@ titleTemplate: 仰望星空的人，不应该被嘲笑
 
 hero:
   name: Cholez
-  text: Front-end King
+  text: Front-End King
   tagline: 🌈 仰望星空的人，不应该被嘲笑
   
   image:

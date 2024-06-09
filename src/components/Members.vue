@@ -5,7 +5,7 @@
     {
       avatar: "https://www.github.com/CholezYu.png",
       name: "Cholez.Yu",
-      title: "Front-end King",
+      title: "Front-End King",
       desc: "🌈 仰望星空的人，不应该被嘲笑",
       links: [
         { icon: "github", link: "https://github.com/CholezYu" },
