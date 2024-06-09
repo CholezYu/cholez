@@ -32,26 +32,22 @@ import { urlToBase64 } from "@/utils/urlToBase64"
 async function toExcel(data, headers, title) {
   const workbook = new Workbook()
   const sheet = workbook.addWorksheet("sheet")
-  
   sheet.columns = headers
   sheet.addRows(data)
   
   for (let i = 1; i <= headers.length; i++) { // 列
     for (let j = 1; j <= data.length + 1; j++) { // 行
       if (j > 1) sheet.getRow(j).height = 120
-      
       sheet.getRow(j).getCell(i).alignment = {
         vertical: "middle",
         horizontal: "center",
         wrapText: true
       }
-      
       sheet.getRow(j).getCell(i).font = {
         name: "Arial Unicode MS",
         size: 10
       }
     }
-    
     sheet.getRow(1).getCell(i).font.bold = true
   }
   
@@ -61,7 +57,6 @@ async function toExcel(data, headers, title) {
   await (async function () {
     for (let row = 1; row <= urls.length; row++) {
       const base64 = await urlToBase64(urls[row - 1])
-      
       const imageId = workbook.addImage({
         base64: base64.toString(),
         extension: "jpeg"
@@ -112,3 +107,78 @@ async function toExcel(data, headers, title) {
 
 `useEffect` 是 React 一个比较重要并且难理解的 hook。我们需要注意 `setup` 和 `cleanup` 函数的执行时机，以及受到依赖项的控制。
 最重要的是，如何正确使用 `useEffect`，这里就需要知道哪些操作是 **副作用**。
+
+## 周日 Sun. <Badge type="info" text="06-09" />
+
+### 午后剧场
+
+今天看到《新三国》94集，上方谷的一场大雨浇灭了丞相北伐的希望，“天不助我，助尔曹” 😭 虽然已经看过无数遍，还是会被感动。一定要去一次武侯祠。
+
+还有最近一直在抖音刷到一首歌，已经单曲循环一下午了，“假如爱有天意”——李健。
+
+### 今日收获
+
+之前学习 React 的时候直接跳过了高阶组件，以为是很高深的技术，现在再来看感觉很好理解。跟 Vue Hooks 的作用其实差不多，都是抽离代码，进行逻辑复用。
+
+写一个小案例。它可以赋予目标组件输出日志的功能。
+
+```tsx
+const WithLog = (Component: FC) => {
+  return (props: any) => {
+    useEffect(() => {
+      console.log(`组件${Component.name}被挂载了 ${dayjs().format("HH:mm:ss")}`)
+      
+      return () => {
+        console.log(`组件${Component.name}被销毁了 ${dayjs().format("HH:mm:ss")}`)
+      }
+    }, [])
+    
+    return <Component {...props} />
+  }
+}
+```
+
+下面是一个我非常喜欢使用的 Pagination Hook。
+
+```ts
+function usePagination(config: {
+  callback: Function,
+  initTotal?: number,
+  initCurrent?: number,
+  initSize?: number
+}) {
+  const { callback, initTotal, initCurrent, initSize } = config
+  
+  // 总条数
+  const total = ref(initTotal ?? 0)
+  
+  // 当前页
+  const current = ref(initCurrent ?? 1)
+  
+  // 每页条数
+  const size = ref(initSize ?? 10)
+  
+  // 当前页改变时
+  const onCurrentChange = (nowCurrent: number) => {
+    current.value = nowCurrent
+    callback()
+  }
+  
+  // 每页条数改变时
+  const onSizeChange = (nowSize: number) => {
+    size.value = nowSize
+    if (current.value > Math.ceil(total.value / size.value)) {
+      current.value = Math.ceil(total.value / size.value)
+    }
+    callback()
+  }
+  
+  return {
+    pagination: { total, current, size },
+    onCurrentChange,
+    onSizeChange
+  }
+}
+```
+
+这么看来，不管是 React HOC 还是 Vue Hooks，它们本质上都是一个函数，React HOC 会返回一个组件，而 Vue Hooks 则是返回一些响应式数据和方法。
