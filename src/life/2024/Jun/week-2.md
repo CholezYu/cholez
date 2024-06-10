@@ -126,10 +126,10 @@ async function toExcel(data, headers, title) {
 const WithLog = (Component: FC) => {
   return (props: any) => {
     useEffect(() => {
-      console.log(`组件${Component.name}被挂载了 ${dayjs().format("HH:mm:ss")}`)
+      console.log(`${Component.name} 组件已挂载 ${now()}`)
       
       return () => {
-        console.log(`组件${Component.name}被销毁了 ${dayjs().format("HH:mm:ss")}`)
+        console.log(`${Component.name} 组件已销毁 ${now()}`)
       }
     }, [])
     
