@@ -1,15 +1,7 @@
 import { DefaultTheme } from "vitepress"
 
 const nav: DefaultTheme.NavItem[] = [
-  {
-    text: "导航",
-    items: [
-      {
-        text: "🗓 我的 2024",
-        link: "/life/2024/"
-      }
-    ]
-  },
+  { text: "🗓 我的 2024", link: "/life/2024/" },
   { text: "📖 前端文档", link: "http://docs.yuwenjian.com" },
   { text: "✏️ LeetCode", link: "/algorithm/" },
   {
