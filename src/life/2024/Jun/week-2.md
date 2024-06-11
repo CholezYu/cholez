@@ -129,7 +129,7 @@ const WithLog = (Component: FC) => {
       console.log(`${Component.name} 组件已挂载 ${now()}`)
       
       return () => {
-        console.log(`${Component.name} 组件已销毁 ${now()}`)
+        console.log(`${Component.name} 组件已卸载 ${now()}`)
       }
     }, [])
     
