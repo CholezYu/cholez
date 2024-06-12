@@ -2,14 +2,18 @@
 
 ## 周日 Sun. <Badge type="info" text="06-02" />
 
-周末下雨，刷下抖音，关注中东局势，叶海亚太帅啦 😎！
+### 中东局势
 
-然后学习一下 [二叉搜索树 (BinarySearchTree)](http://docs.yuwenjian.com/algorithm/Tree.html#二叉搜索树)。
+叶海亚太帅啦 😎！
+
+### 二叉搜索树
+
+学习一下 [二叉搜索树 (BinarySearchTree)](http://docs.yuwenjian.com/algorithm/Tree.html#二叉搜索树)。
 实现了 **插入**、 **查找**、 **删除** 操作。
 
 > [!tip] 😕🫤😟🙁☹️😮😯😲😳🥺🥹😦😧😔
 >
-> 删除操作有点复杂，不确定能不能写出第二遍。
+> 删除操作还是有点复杂的，折磨了很久。
 
 插入操作。
 
@@ -93,7 +97,7 @@ BinarySearchTree.remove = function (target: number) {
     parent = current
     current = parent[type]
   }
-  if (!current) return console.warn(`target: ${ target } is not found`)
+  if (!current) return console.warn(`target: ${target} is not found`)
   /* 找到目标节点 */
   
   // current => both (left & right)
