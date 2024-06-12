@@ -14,9 +14,8 @@ const nav: DefaultTheme.NavItem[] = [
           { text: "Element UI", link: "https://element.eleme.cn/#/zh-CN" },
           { text: "Element Plus", link: "https://element-plus.org/zh-CN" },
           { text: "Arco Design", link: "https://arco.design" },
-          { text: "Vuetify", link: "https://vuetifyjs.com/zh-Hans" },
           { text: "PrimeVue", link: "https://primevue.org" },
-          { text: "Nuxt.js", link: "https://nuxt.com" }
+          { text: "Nuxt", link: "https://nuxt.com" }
         ]
       },
       {
@@ -28,7 +27,7 @@ const nav: DefaultTheme.NavItem[] = [
           { text: "Material UI", link: "https://mui.com" },
           { text: "React Native", link: "https://reactnative.dev" },
           { text: "Expo", link: "https://expo.dev" },
-          { text: "Next.js", link: "https://nextjs.org" }
+          { text: "Next", link: "https://nextjs.org" }
         ]
       },
       {
