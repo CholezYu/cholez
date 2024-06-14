@@ -3,7 +3,7 @@
   
   const members = [
     {
-      avatar: "https://www.github.com/CholezYu.png",
+      avatar: "https://p3-pc-sign.douyinpic.com/aweme-avatar/tos-cn-i-0813_af6b42e7a4de471f9411d7d4774bf53b~tplv-8yspqt5zfm-300x300.webp?x-expires=1718560800&x-signature=nEyUGumgJkAkquY2dKzL7kEAJQc%3D&from=2480802190",
       name: "Cholez.Yu",
       title: "Front-End King",
       desc: "🌈 仰望星空的人，不应该被嘲笑",
