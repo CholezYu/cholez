@@ -32,9 +32,8 @@ const nav: DefaultTheme.NavItem[] = [
       {
         text: "CSS",
         items: [
-          { text: "Bootstrap", link: "https://getbootstrap.com" },
-          { text: "UnoCSS", link: "https://unocss.dev" },
-          { text: "Tailwind", link: "https://tailwindcss.com" }
+          { text: "Tailwind", link: "https://tailwindcss.com" },
+          { text: "UnoCSS", link: "https://unocss.dev" }
         ]
       },
       {
