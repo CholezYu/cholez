@@ -8,7 +8,7 @@
 
 ### 二叉搜索树
 
-学习一下 [二叉搜索树 (BinarySearchTree)](http://docs.yuwenjian.com/algorithm/Tree.html#二叉搜索树)。
+学习一下 [二叉搜索树 (BinarySearchTree)](http://docs.yuwenjian.com/algorithm/tree.html#二叉搜索树)。
 实现了 **插入**、 **查找**、 **删除** 操作。
 
 > [!tip] 😕🫤😟🙁☹️😮😯😲😳🥺🥹😦😧😔
