@@ -4,33 +4,28 @@
 
 ### 导出 Excel
 
-遇到一个比较困难的需求，需要导出 Excel 表格，并且每条数据中都包含图片，也就是需要将 url 转成 base64 并插入到表格中，然后导出。
+遇到一个比较复杂的需求，需要导出 Excel 表格，并且每条数据中都包含图片，也就是需要将 url 转成 base64 并插入到表格中，然后导出。
 
 经过几个小时的摸索，最终使用 Exceljs 实现了这个需求。
 
 > [!warning] 有几个注意点
 >
-> 1. url 转 base64 是异步的，所以需要使用 await 等待；
+> 1. url 转 base64 是异步的；
 >
-> 2. 将这些 base64 插入到表格中也是异步任务。如下列代码所示，我对 urlToBase64 所在的匿名自执行函数使用了 await 进行等待；
+> 2. 将这些 base64 插入到表格也是异步的；
 >
-> 3. 最后，将工作簿对象 workbook 生成的 buffer 转为 blob 也是异步任务，也需要使用 await。即使它在最后一步，如果不使用 await 的话，loading
-     会提前结束，页面会呈现几秒钟的卡死状态。
+> 3. 将工作簿对象 workbook 生成的 buffer 转为 blob 也是异步任务。即使它在最后一步，如果不进行异步处理的话，loading
+     会提前结束，页面会呈现几秒的卡死状态。
 >
-> 经过反复尝试，少一个 **await** 都不能成功导出带图片的 Excel。
-
-> [!tip] 继续优化
->
-> 如果导出的数据过多，那么导出过程就会持续很久。即使使用了 loading 并监听进度，用户的体验也不是很好，因为页面处于 “阻塞” 状态。后续我会尝试使用 webwoker
-> 将导出的过程交给分线程处理，这样用户在等待的同时可以继续使用页面。
+> 经过反复尝试，上述异步任务都需要进行处理，缺少任何一个都不能成功导出带图片的 Excel。
 
 ```ts
-import { Workbook } from "exceljs"
-import { saveAs } from "file-saver/dist/FileSaver"
-import { urlToBase64 } from "@/utils/urlToBase64"
+import ExcelJS from "exceljs"
+import FileSaver from "file-saver"
+import urlToBase64 from "@/utils"
 
 async function toExcel(data, headers, title) {
-  const workbook = new Workbook()
+  const workbook = new ExcelJS.Workbook()
   const sheet = workbook.addWorksheet("sheet")
   sheet.columns = headers
   sheet.addRows(data)
@@ -74,10 +69,15 @@ async function toExcel(data, headers, title) {
   
   await workbook.xlsx.writeBuffer().then(buffer => {
     const _file = new Blob([buffer], { type: "application/octet-stream" })
-    saveAs(_file, `${title}.xlsx`)
+    FileSaver.saveAs(_file, `${title}.xlsx`)
   })
 }
 ```
+
+> [!tip] 继续优化
+>
+> 如果导出的数据过多，那么导出过程就会持续很久。即使使用了 loading 并监听进度，用户的体验也不是很好，因为页面处于 “阻塞” 状态。后续我会尝试使用 webwoker
+> 将导出的过程交给分线程处理，这样用户在等待的同时可以继续使用页面。
 
 ### 非平衡树
 
@@ -123,7 +123,7 @@ async function toExcel(data, headers, title) {
 写一个小案例。它可以赋予目标组件输出日志的功能。
 
 ```tsx
-const WithLog = (Component: FC) => {
+const WithLog = (Component: FC<any>) => {
   return (props: any) => {
     useEffect(() => {
       console.log(`${Component.name} 组件已挂载 ${now()}`)
