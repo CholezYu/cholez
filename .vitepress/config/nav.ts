@@ -10,21 +10,20 @@ const nav: DefaultTheme.NavItem[] = [
       {
         text: "Vue 生态",
         items: [
-          { text: "VueUse", link: "https://vueuse.org" },
-          { text: "Element UI", link: "https://element.eleme.cn/#/zh-CN" },
-          { text: "Element Plus", link: "https://element-plus.org/zh-CN" },
           { text: "Arco Design", link: "https://arco.design" },
+          { text: "Element Plus", link: "https://element-plus.org/zh-CN" },
           { text: "PrimeVue", link: "https://primevue.org" },
+          { text: "VueUse", link: "https://vueuse.org" },
           { text: "Nuxt", link: "https://nuxt.com" }
         ]
       },
       {
         text: "React 生态",
         items: [
-          { text: "Zustand", link: "https://zustand-demo.pmnd.rs" },
           { text: "Ant Design", link: "https://ant.design/index-cn" },
-          { text: "Shadcn UI", link: "https://ui.shadcn.com" },
           { text: "Material UI", link: "https://mui.com" },
+          { text: "Shadcn UI", link: "https://ui.shadcn.com" },
+          { text: "Zustand", link: "https://zustand-demo.pmnd.rs" },
           { text: "React Native", link: "https://reactnative.dev" },
           { text: "Expo", link: "https://expo.dev" },
           { text: "Next", link: "https://nextjs.org" }
