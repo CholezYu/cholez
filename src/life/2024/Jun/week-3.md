@@ -64,10 +64,9 @@ function useReducer<T = any>(
 
 ### v6 路由配置
 
-在阅读 React Router 官方文档的时候，发现路由配置和我之前写的不一样了，然后我查阅了很多文档，发现它们对路由配置的写法几乎都不一样，我在想也许是版本的原因。
-不管怎样，一定要把它搞明白。
+在阅读 React Router 官方文档的时候，发现路由配置和我之前写的不一样了，然后我查阅了很多文档，发现它们对路由配置的写法几乎都不一样。
 
-最终，我总结出四套随着版本递进的 [路由配置](http://docs.yuwenjian.com/front-end/react.html#路由配置)。 下面是我觉得最优雅的一种写法。
+最终，总结出了几种比较典型的 [路由配置 | Docs.React](http://docs.yuwenjian.com/front-end/react.html#路由配置)。 下面是我觉得最优雅的一种写法。
 
 ```tsx
 import {
@@ -166,4 +165,4 @@ React 与 Vue 不同，使用 CSS 不是特别方便，我们常常需要制定�
 在 Vue 中，我一般使用 Sass + Tailwind。对于复杂的样式，使用传统写法；对于简单的样式，使用更加简便的方式。并且 Vue 提供了 scoped 特性，我们不需要过多关注 CSS
 的污染问题。
 
-而 React 想要解决 CSS 污染问题会相对繁琐一点。详见 [CSS 解决方案](http://docs.yuwenjian.com/front-end/react.html#css-解决方案)。
+而 React 想要解决 CSS 污染问题会相对繁琐一点。详见 [CSS 解决方案 | Docs.React](http://docs.yuwenjian.com/front-end/react.html#css-解决方案)。

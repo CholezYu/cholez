@@ -2,13 +2,9 @@
 
 ## 周日 Sun. <Badge type="info" text="06-02" />
 
-### 中东局势
-
-叶海亚太帅啦 😎！
-
 ### 二叉搜索树
 
-学习一下 [二叉搜索树 (BinarySearchTree)](http://docs.yuwenjian.com/algorithm/tree.html#二叉搜索树)。
+学习一下 [二叉搜索树 | Docs.Algorithm](http://docs.yuwenjian.com/algorithm/tree.html#二叉搜索树)。
 实现了 **插入**、 **查找**、 **删除** 操作。
 
 > [!tip] 😕🫤😟🙁☹️😮😯😲😳🥺🥹😦😧😔
