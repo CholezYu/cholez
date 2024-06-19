@@ -87,3 +87,61 @@ const userSlice = createSlice({
   }
 })
 ```
+
+## 周三 Wed. <Badge type="info" text="06-19" />
+
+### Zustand
+
+Zustand 简直就是 React 生态中的 Pinia。不说了，直接看示例。
+
+```ts
+import { create } from "zustand"
+
+type CounterState = {
+  count: number
+}
+
+type CounterAction = {
+  increment: () => void
+  decrement: () => void
+  update: (value: number) => void
+  reset: () => void
+}
+
+const useCounterStore = create<CounterState & CounterAction>(set => ({
+  count: 0,
+  increment: () => {
+    set(state => ({ count: state.count + 1 }))
+  },
+  decrement: () => {
+    set(state => ({ count: state.count - 1 }))
+  },
+  update: value => {
+    set({ count: value })
+  },
+  reset: () => {
+    set({ count: 0 })
+  }
+}))
+```
+
+在组件中使用。不能说跟 Pinia 没有区别，简直就是一模一样。
+
+```tsx
+import useCounterStore from "@/store/counterStore"
+
+const { count, increment, decrement, update, reset } = useCounterStore()
+
+const random = Math.ceil(Math.random() * 100)
+
+return (
+  <>
+    <button onClick={increment}>increment</button>
+    <button onClick={decrement}>decrement</button>
+    <button onClick={() => update(random)}>update</button>
+    <button onClick={reset}>reset</Button>
+  </>
+)
+```
+
+简直不要太香了，这还用啥 Redux 😲？
