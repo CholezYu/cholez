@@ -139,9 +139,47 @@ return (
     <button onClick={increment}>increment</button>
     <button onClick={decrement}>decrement</button>
     <button onClick={() => update(random)}>update</button>
-    <button onClick={reset}>reset</Button>
+    <button onClick={reset}>reset</button>
   </>
 )
 ```
 
 简直不要太香了，这还用啥 Redux 😲？
+
+## 周五 Fri. <Badge type="info" text="06-21" />
+
+### Hybrid or SSR ？
+
+React 的学习告一段落。但是前端的学习并未停止，接下来是选择 Hybrid 还是 SSR 呢？
+
+Hybrid 主要从移动端入手，包括 Web App、微信小程序、uni-app、React Native，并且已经有一部分的基础，上手应该会很快。
+
+而 SSR 相对来说比较陌生，虽然了解过它的优势：提升性能和 SEO 优化，主要用于 C 端项目。但是对它的认知还只是在概念上。
+
+还是先从简单的入手吧。React Native 本身就基于 React，同样是使用 JSX 语法，只不过需要再学习一些移动端的组件和特性。
+
+尤雨溪在采访中推荐跨平台开发优先选择 React Native；如果要兼容小程序，推荐使用 uni-app
+[直播回放 | 5月30日「JetBrains码上道」| 重新发明 Vue：经验和教训（嘉宾：尤雨溪）](https://www.bilibili.com/video/BV1fb421e7Y1/?spm_id_from=333.999.0.0&vd_source=e24dcfda7a8ec45e20149c78840119e8)。
+
+## 周六 Sat. <Badge type="info" text="06-22" />
+
+### 使用 Expo 构建 RN 项目
+
+```bash
+npx create-expo-app@latest
+
+# or
+yarn create expo-app
+```
+
+### RN 的基本组件
+
+- 图片：可以引入静态图片、网络图片、base64，访问相册等。
+
+- 文本输入框：与 React 的输入框用法相似。
+
+- 按钮：`<Button>` 不能设置样式，推荐使用 `<Pressable>`。
+
+- 滚动视图：原生 App 开发中，超出屏幕的部分不会生成滚动条，而是需要使用 `ScrollView`。
+
+- 长列表：`<FlatList>` 用于渲染基本长列表，`<SectionList>` 用于渲染分组长列表。
