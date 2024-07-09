@@ -180,6 +180,59 @@ yarn create expo-app
 
 - 按钮：`<Button>` 不能设置样式，推荐使用 `<Pressable>`。
 
-- 滚动视图：原生 App 开发中，超出屏幕的部分不会生成滚动条，而是需要使用 `ScrollView`。
+- 滚动视图：`<ScrollView>` 会在内容超出屏幕时生成滚动条。
 
 - 长列表：`<FlatList>` 用于渲染基本长列表，`<SectionList>` 用于渲染分组长列表。
+
+## 周日 Sun. <Badge type="info" text="06-23" />
+
+### 下拉刷新
+
+```tsx
+const [list, setList] = useState(initialList)
+
+const [isFreshing, setFreshing] = useState(false)
+
+const refresh = async () => {
+  setFreshing(true)
+  const response = await (await fetch(url)).json()
+  setList(response.data)
+  setFreshing(false)
+}
+
+return <FlatList
+  data={list}
+  renderItem={({ item }) => <Text>{item.desc}</Text>}
+  keyExtractor={item => item.id}
+  onRefresh={refresh}
+  refreshing={isFreshing}
+/>
+```
+
+### 上拉加载
+
+```tsx
+const [list, setList] = useState(initialList)
+
+const [isReached, setReached] = useState(false)
+
+const reach = async () => {
+  setReached(true)
+  const response = await (await fetch(url)).json()
+  setList([...list, ...response.data])
+  setReached(false)
+}
+
+return (
+  <View>
+    <FlatList
+      data={list}
+      renderItem={({ item }) => <Text>{item.desc}</Text>}
+      keyExtractor={item => item.id}
+      onEndReached={reach}
+      onEndReachedThreshold={0.1}
+    />
+    {isReached && <ActivityIndicator />}
+  </View>
+)
+```
