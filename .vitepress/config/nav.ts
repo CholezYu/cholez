@@ -12,7 +12,6 @@ const nav: DefaultTheme.NavItem[] = [
         items: [
           { text: "Arco Design", link: "https://arco.design" },
           { text: "Element Plus", link: "https://element-plus.org/zh-CN" },
-          { text: "PrimeVue", link: "https://primevue.org" },
           { text: "VueUse", link: "https://vueuse.org" },
           { text: "Nuxt", link: "https://nuxt.com" }
         ]
@@ -21,8 +20,8 @@ const nav: DefaultTheme.NavItem[] = [
         text: "React 生态",
         items: [
           { text: "Ant Design", link: "https://ant.design/index-cn" },
-          { text: "Material UI", link: "https://mui.com" },
           { text: "Shadcn UI", link: "https://ui.shadcn.com" },
+          { text: "MUI", link: "https://mui.com" },
           { text: "Zustand", link: "https://zustand-demo.pmnd.rs" },
           { text: "React Native", link: "https://reactnative.dev" },
           { text: "Expo", link: "https://expo.dev" },
