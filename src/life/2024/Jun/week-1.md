@@ -7,10 +7,6 @@
 学习一下 [二叉搜索树 | Docs.Algorithm](http://docs.yuwenjian.com/algorithm/tree.html#二叉搜索树)。
 实现了 **插入**、 **查找**、 **删除** 操作。
 
-> [!tip] 😕🫤😟🙁☹️😮😯😲😳🥺🥹😦😧😔
->
-> 删除操作还是有点复杂的，折磨了很久。
-
 插入操作。
 
 ```ts
