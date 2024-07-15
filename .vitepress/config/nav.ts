@@ -10,22 +10,29 @@ const nav: DefaultTheme.NavItem[] = [
       {
         text: "Vue 生态",
         items: [
-          { text: "Arco Design", link: "https://arco.design" },
-          { text: "Element Plus", link: "https://element-plus.org/zh-CN" },
           { text: "VueUse", link: "https://vueuse.org" },
+          { text: "Element Plus", link: "https://element-plus.org/zh-CN" },
           { text: "Nuxt", link: "https://nuxt.com" }
         ]
       },
       {
         text: "React 生态",
         items: [
-          { text: "Ant Design", link: "https://ant.design/index-cn" },
-          { text: "Shadcn UI", link: "https://ui.shadcn.com" },
-          { text: "MUI", link: "https://mui.com" },
           { text: "Zustand", link: "https://zustand-demo.pmnd.rs" },
+          { text: "Umi", link: "https://umijs.org" },
+          { text: "Ant Design", link: "https://ant.design/index-cn" },
+          { text: "MUI", link: "https://mui.com" },
+          { text: "Shadcn UI", link: "https://ui.shadcn.com" },
+          { text: "Next", link: "https://nextjs.org" }
+        ]
+      },
+      {
+        text: "移动端",
+        items: [
           { text: "React Native", link: "https://reactnative.dev" },
           { text: "Expo", link: "https://expo.dev" },
-          { text: "Next", link: "https://nextjs.org" }
+          { text: "Flutter", link: "https://flutter.dev" },
+          { text: "Kotlin", link: "https://kotlinlang.org" }
         ]
       },
       {
