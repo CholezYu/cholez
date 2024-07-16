@@ -142,9 +142,9 @@ BinarySearchTree.remove = function (target: number) {
 
 :::
 
-## 导出 Excel
+## Excel 导出
 
-详见 [导出函数 | Docs.Exceljs](http://docs.yuwenjian.com/tools/exceljs.html#导出)。
+详见 [导出函数 | Docs.Exceljs](http://docs.yuwenjian.com/tools/exceljs.html#导出函数)。
 
 之前用 Exceljs 做表格导出，在处理图片这块遇到点问题，url 转 base64
 的过程中会阻塞页面，当时没有很好的解决办法，只能用 loading 解决。今天使用 Web Worker
@@ -158,7 +158,7 @@ import Exceljs from "exceljs"
 import FileSaver from "file-saver"
 
 // 进度
-const remainder = ref(0)
+const progress = ref(0)
 
 const worker = new Worker("worker.js")
 
@@ -169,7 +169,7 @@ export default function useExport<T, K>() {
     data: T
     headers: K
   }) => {
-    remainder.value = data.length
+    progress.value = data.length
     
     const workbook = new Exceljs.Workbook()
     const sheet = workbook.addWorksheet("sheet")
@@ -189,7 +189,7 @@ export default function useExport<T, K>() {
     listener.value = async (event: MessageEvent) => {
       const { row, base64 } = event.data
       
-      remainder.value--
+      progress.value--
       
       const imageId = workbook.addImage({
         base64: base64.toString(),
@@ -214,11 +214,11 @@ export default function useExport<T, K>() {
     worker.addEventListener("message", listener.value)
   }
   
-  return { remainder, toExcel }
+  return { progress, toExcel }
 }
 ```
 
-```js [worker.js]
+```ts [worker.ts]
 self.addEventListener("message", async event => {
   const { urls } = event.data
   for (let row = 1; row <= urls.length; row++) {
