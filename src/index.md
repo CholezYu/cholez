@@ -23,11 +23,11 @@ hero:
       link: https://github.com/CholezYu/cholez
 
 features:
-  - icon: 📖
-    title: 前端文档
-    details: 我会不断学习，并实时更新任何前端的知识。
-    link: http://docs.yuwenjian.com
-    linkText: Cholez Web Docs
+  - icon: 🏠
+    title: 学习动态
+    details: 记录一下工作中遇到的问题，每天的学习与成长，以及其他兴趣爱好。
+    link: /life/2024/
+    linkText: 今天也是充满希望的一天
   
   - icon: ✏️
     title: 算法
@@ -41,11 +41,11 @@ features:
     link: /
     linkText: 解读《Vue.js 设计与实现》
   
-  - icon: 🏠
-    title: 日常动态
-    details: 记录一下工作中遇到的问题，每天的学习与成长，以及其他兴趣爱好。
-    link: /life/2024/
-    linkText: 今天也是充满希望的一天
+  - icon: 📖
+    title: 前端文档
+    details: 我会不断学习，并实时更新任何前端的知识。
+    link: http://docs.yuwenjian.com
+    linkText: Cholez Web Docs
 ---
 
 <script setup>
