@@ -13,15 +13,15 @@ const sidebar: DefaultTheme.Sidebar = {
       link: "/life/2024/",
       items: [
         {
-          text: "六月 June",
+          text: "六月",
           link: "/life/2024/Jun"
         },
         {
-          text: "七月 July",
+          text: "七月",
           link: "/life/2024/Jul"
         },
         {
-          text: "八月 August",
+          text: "八月",
           link: "/life/2024/Aug"
         }
       ]
