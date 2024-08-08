@@ -29,6 +29,12 @@ features:
     link: /life/2024/
     linkText: 今天也是充满希望的一天
   
+  - icon: 📖
+    title: 前端文档
+    details: 我会不断学习，并实时更新任何前端的知识。
+    link: http://docs.yuwenjian.com
+    linkText: Cholez Web Docs
+  
   - icon: ✏️
     title: 算法
     details: 算法对于前端来说重要吗？思考这个问题的时间，不如直接开始吧。
@@ -40,12 +46,6 @@ features:
     details: Vue 3 的响应系统、渲染器、组件化究竟是如何实现的呢？
     link: /
     linkText: 解读《Vue.js 设计与实现》
-  
-  - icon: 📖
-    title: 前端文档
-    details: 我会不断学习，并实时更新任何前端的知识。
-    link: http://docs.yuwenjian.com
-    linkText: Cholez Web Docs
 ---
 
 <script setup>

@@ -1,7 +1,12 @@
 import { DefaultTheme } from "vitepress"
 
 const nav: DefaultTheme.NavItem[] = [
-  { text: "🗓 我的 2024", link: "/life/2024/" },
+  {
+    text: "🏠 学习动态",
+    items: [
+      { text: "2024", link: "/life/2024/" }
+    ]
+  },
   { text: "📖 前端文档", link: "http://docs.yuwenjian.com" },
   { text: "✏️ LeetCode", link: "/algorithm/" },
   {
@@ -21,8 +26,6 @@ const nav: DefaultTheme.NavItem[] = [
           { text: "Zustand", link: "https://zustand-demo.pmnd.rs" },
           { text: "Umi", link: "https://umijs.org" },
           { text: "Ant Design", link: "https://ant.design/index-cn" },
-          { text: "MUI", link: "https://mui.com" },
-          { text: "Shadcn UI", link: "https://ui.shadcn.com" },
           { text: "Next", link: "https://nextjs.org" }
         ]
       },
@@ -30,7 +33,6 @@ const nav: DefaultTheme.NavItem[] = [
         text: "移动端",
         items: [
           { text: "React Native", link: "https://reactnative.dev" },
-          { text: "Expo", link: "https://expo.dev" },
           { text: "Flutter", link: "https://flutter.dev" },
           { text: "Kotlin", link: "https://kotlinlang.org" }
         ]
@@ -50,8 +52,7 @@ const nav: DefaultTheme.NavItem[] = [
         ]
       }
     ]
-  },
-  { text: "博客", link: "http://blog.yuwenjian.com" }
+  }
 ]
 
 export default nav
