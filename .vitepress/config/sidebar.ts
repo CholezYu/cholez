@@ -23,6 +23,10 @@ const sidebar: DefaultTheme.Sidebar = {
         {
           text: "八月",
           link: "/life/2024/Aug"
+        },
+        {
+          text: "九月",
+          link: "/life/2024/Sep"
         }
       ]
     }
