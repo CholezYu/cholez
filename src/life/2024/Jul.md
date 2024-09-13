@@ -82,3 +82,7 @@ cd android
 - RequestAnimationFrame：以更好的性能执行动画。适合用于实现高效和平滑的动画效果。
 
 - Clipboard：读写剪贴板的内容。适用于实现复制、粘贴功能。
+
+## 微信小程序
+
+详见 [微信小程序 | Docs.Mini App](http://docs.yuwenjian.com/mobile/mini-app.html)。
